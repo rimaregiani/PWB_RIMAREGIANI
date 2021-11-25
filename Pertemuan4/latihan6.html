@@ -1,0 +1,52 @@
+<html>
+    <head>
+    <title>Kalkulator Online</title>
+    <script>
+        function hitung(angka1,angka2,operator)
+        {
+            var hasil;
+            if (operator=="tambah"){
+                hasil = parseInt(angka1) + parseInt(angka2);
+            }else if(operator=="kurang"){
+                hasil = parseInt(angka1) - parseInt(angka2);
+            }else if(operator=="kali"){
+                hasil = parseInt(angka1) * parseInt(angka2);
+            }else if(operator=="bagi"){
+                hasil = parseInt(angka1) / parseInt(angka2);
+            }
+            document.getElementById("hasil").innerHTML = "<b>" +hasil+ "</b>";
+            return false;
+        }
+    </script>
+    </head>
+    <body>
+        <form name="form1" method="post" action="hitung.php" onsubmit="return hitung (form1.angka.value,form1.angka2.value,form1.operator.value);">
+            <center>
+                &copy; Rima Regiani - 2021099
+                <h2 style="margin-top: 20px; font-family: sans-serif; color: blueviolet;">
+                    <center>Kalkulator Sederhana</center>
+                </h2>
+                    <h3 style="font-family: sans-serif;">
+                        <div class="row" style="display: inline-flex;">
+                            <h5 style="margin-right: 220px; ">Nilai 1</h5>
+                            <h5 style="margin-right: 80px;">Nilai 2</h5>
+                        </div>
+                        
+                        <br>
+                        <input name="angka" type="text" id="angka" required autocomplete="off">
+                        <select name="operator" id="operator">
+                            <option value="tambah">+</option>
+                            <option value="kurang">-</option>
+                            <option value="kali">*</option>
+                            <option value="bagi">/</option>
+                        </select>
+                        <input name="angka2" type="text" id="angka2" required autocomplete="off">
+                        <input type="submit" name="Submit" value="Submit">
+                        <br><br>
+                        <div style="float:center;">Hasil :</div><br>
+                        <div id="hasil"></div>
+                    </h3>
+            </center>
+        </form>
+    </body>
+</html>

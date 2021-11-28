@@ -179,8 +179,6 @@
       document.getElementById('tdSpringbed').innerHTML = 'Rp.'+ 0;
     }
 
-   //615
-
     if(namaKamar == 'AL'){
       document.getElementById('tdNamaKamar').innerHTML = 'Alamanda';
       var price = 450000*lama;
@@ -261,7 +259,7 @@
     }else if(jenisPembayaran == "Debit"){
         return (harga * 0.15);
     }else if(jenisPembayaran == "Cash"){
-      return 0 + harga;
+      return (harga * 0);
     }else{
       alert('error');
     }

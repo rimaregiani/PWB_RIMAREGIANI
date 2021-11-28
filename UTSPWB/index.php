@@ -259,7 +259,7 @@
     }else if(jenisPembayaran == "Debit"){
         return (harga * 0.15);
     }else if(jenisPembayaran == "Cash"){
-      return (harga * 0);
+      return (harga);
     }else{
       alert('error');
     }
